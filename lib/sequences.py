@@ -1,4 +1,26 @@
 #!/usr/bin/env python3
 
 def print_fibonacci(length):
-    pass
+    if length <= 0:
+        print([])
+        return
+    elif length == 1:
+        print([0])
+        return
+    
+    fib_sequence = [0, 1]
+    
+    while len(fib_sequence) < length:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    
+    # ✅ Only print once, at the end
+    print(fib_sequence)
+
+
+print_fibonacci(9)         
+
+
+
+
+
+    
